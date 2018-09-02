@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.github-widget {
+  width: 377px;
+  margin: 0 auto;
+  border-top: 5px solid #000;
+
+  &__header {
+    text-align: center;
+    background-color: #FCDD6F;
+    padding: 5px 0;
+
+    img {
+      width: 13.2%;
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  
+  &__refresh {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 25px;
+    border: none;
+    background-color: #FCDD6F;
+    text-transform: uppercase;
+    line-height: 37px;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      top: 50%;
+      left: 50%;
+      margin-top: -9px;
+      margin-left: -60px;
+      background-image: url(/img/sync-alt-solid.svg);
+    }
+  }
+}
+
+.widget-item {
+  display: flex;
+  align-items: stretch;
+
+  &__wrapper {
+    display: flex;
+    flex: 0 0 100%;
+    width: 100%;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #C9C9C9;
+  }
+
+  &__content {
+    display: flex;
+    flex: 0 1 88%;
+    align-items: center;
+    transition: margin .5s;
+  }
+
+  &__img {
+    flex: 0 0 19%;
+    width: 19%;
+    margin: 20px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__text {
+    flex: 0 1 100%;
+    padding: 24px 0;
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+
+  &__location {
+    position: relative;
+    display: block;
+    padding-left: 17px;
+    font-size: 14px;
+    line-height: 1.2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      left: 0;
+      top: -2px;
+      background-image: url(/img/map-marker-alt-solid.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  &__login {
+    font-size: 14px;
+    line-height: 1.14;
+    color: #C7C7C7;
+  }
+
+  &__remove {
+    position: relative;
+    display: flex;
+    flex: 0 0 13%;
+    width: 13%;
+    align-self: stretch;
+    order: 2;
+
+    &:hover + div {
+      margin-left: -109px;
+    }
+  }
+
+  &__open-remove-btn {
+    flex: 0 0 100%;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    align-self: stretch;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 19px solid transparent;
+      border-bottom: 19px solid transparent;
+    }
+
+    &::before {
+      border-left: 19px solid #000;
+      left: 50%;
+      top: 50%;
+      margin-top: -19px;
+      margin-left: -9.5px;
+    }
+
+    &::after {
+      border-left: 19px solid #fff;
+      left: 50%;
+      top: 50;
+      margin-top: -19px;
+      margin-left: -11.5px;
+    }
+  }
+
+  &__remove-btn {
+    flex: 0 0 109px;
+    width: 109px;
+    border: none;
+    background: #E37171 url(/img/trash-alt-regular.svg) no-repeat center center;
+    background-size: 45px;
+    cursor: pointer;
+  }
+}

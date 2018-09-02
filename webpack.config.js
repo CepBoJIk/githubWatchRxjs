@@ -29,15 +29,15 @@ const common = {
   },
   module: {
     rules: [
-      {
-        enforce: "pre",
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader",
-        options: {
-          failOnError: true
-        }
-      },
+      // {
+      //   enforce: "pre",
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   loader: "eslint-loader",
+      //   options: {
+      //     failOnError: true
+      //   }
+      // },
       {
         test: /\.(html)$/,
         use: {
@@ -45,7 +45,7 @@ const common = {
         }
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader?name=img/[name].[ext]'
       }
     ]
@@ -77,7 +77,7 @@ const babel = {
 
 const uglify = {
   optimization: {
-    minimize: true
+    minimize: false,
   }
 }
 

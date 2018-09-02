@@ -8,7 +8,7 @@
     "build": "webpack --env production",
     "buildGit": "webpack --env production:github",
     "serv": "static dist",
-    "start": "webpack-dev-server --open --env development",
+    "start": "webpack-dev-server --open --env development --hot",
     "eslint": "eslint --init"
   },
   "repository": {
@@ -43,5 +43,8 @@
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
     "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "rxjs": "^6.3.1"
   }
 }
