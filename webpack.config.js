@@ -29,15 +29,15 @@ const common = {
   },
   module: {
     rules: [
-      // {
-      //   enforce: "pre",
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: "eslint-loader",
-      //   options: {
-      //     failOnError: true
-      //   }
-      // },
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          failOnError: true
+        }
+      },
       {
         test: /\.(html)$/,
         use: {
